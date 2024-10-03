@@ -4,16 +4,17 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <link rel="stylesheet" href="gridstyles.css">
   <link rel="icon" type="image/png" href="pixelart/mini jaminho.png">
+  <link rel="stylesheet" href="styles.css">
 
   <title>Jamesfoxbr's Website</title>
 
   <script
-  src="https://code.jquery.com/jquery-3.3.1.js"
-  integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
-  crossorigin="anonymous">
+    src="https://code.jquery.com/jquery-3.3.1.js"
+    integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+    crossorigin="anonymous">
   </script>
+
   <script> 
     // This says, do the function when the "document" or DOM is ready
     $(function() {
@@ -25,18 +26,18 @@
     });
 
     $(document).ready(function() {
-        $("#homeID").on("click", function (event) {
-            event.preventDefault();
-            $("#home").load("home.html");
-        });
-        $("#coloredID").on("click", function (event) {
-            event.preventDefault();
-            $("#home").load("commissions/colored.html");
-        });
-        $("#pixelartID").on("click", function (event) {
-            event.preventDefault();
-            $("#home").load("commissions/pixelart.html");
-        });
+      $("#homeID").on("click", function (event) {
+          event.preventDefault();
+          $("#home").load("home.html");
+      });
+      $("#coloredID").on("click", function (event) {
+          event.preventDefault();
+          $("#home").load("commissions/colored.html");
+      });
+      $("#pixelartID").on("click", function (event) {
+          event.preventDefault();
+          $("#home").load("commissions/pixelart.html");
+      });
     });
 
   </script>
@@ -437,10 +438,11 @@
   <section class="home-section">
     <div class="home-content">
       <i class='bx bx-menu' ></i>
-
-        <div id="home" style="vertical-align: text-top; background-color: #1d1b31;"></div>
-
+      
+      
     </div>
+    <div id="home" style="margin-left: 100px;"></div>
+      
   </section>
   
   <div class="one"></div>
