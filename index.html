@@ -220,7 +220,7 @@
       display: flex;
       align-items: center;
       justify-content: space-between;
-      background: #1d1b31;
+      background: #11101d;
       padding: 12px 0;
       transition: all 0.5s ease;
     }
@@ -252,6 +252,7 @@
       font-size: 18px;
       font-weight: 500;
       white-space: nowrap;
+      background-color:;
     }
     .sidebar.close .profile-details i,
     .sidebar.close .profile-details .profile_name,
@@ -302,8 +303,6 @@
 </head>
 <body>
 
-  
-
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
@@ -315,7 +314,7 @@
      <meta name="viewport" content="width=device-width, initial-scale=1.0">
    </head>
 <body>
-  <div class="sidebar close">
+  <div class="sidebar">
     <div class="logo-details">
       <i class='bx bxl-c-plus-plus'></i>
       <span class="logo_name">JamesFoxbr</span>
@@ -327,7 +326,7 @@
           <span class="link_name" id="homeID">Home</span>
         </a>
         <ul class="sub-menu blank">
-          <li><a class="link_name" href="#">Home</a></li>
+          <li id="homeID"><a class="link_name" href="#">Home</a></li>
         </ul>
       </li>
       <li>
@@ -354,18 +353,32 @@
         </div>
         <ul class="sub-menu">
           <li><a class="link_name" href="#">Sketch Commissions</a></li>
+          <li><a href="#" id="coloredID">Portraits</a></li>
+          <li><a href="#" id="sketchID">Full Body</a></li>
+        </ul>
+      </li>
+      <li>
+        <div class="iocn-link">
+          <a href="#">
+            <i class='bx bx-plug' ></i>
+            <span class="link_name">Pixelart Commissions</span>
+          </a>
+          <i class='bx bxs-chevron-down arrow' ></i>
+        </div>
+        <ul class="sub-menu">
+          <li><a class="link_name" href="#">Pixelart Commissions</a></li>
           <li><a href="#">Option 1</a></li>
           <li><a href="#">Option 2</a></li>
-          <li><a href="#">Card Design</a></li>
+          <li><a href="#">Option 3</a></li>
         </ul>
       </li>
       <li>
         <a href="#">
           <i class='bx bx-pie-chart-alt-2' ></i>
-          <span class="link_name">Analytics</span>
+          <span class="link_name">Terms of Service</span>
         </a>
         <ul class="sub-menu blank">
-          <li><a class="link_name" href="#">Analytics</a></li>
+          <li><a class="link_name" href="#">Terms of Service</a></li>
         </ul>
       </li>
       <li>
@@ -375,21 +388,6 @@
         </a>
         <ul class="sub-menu blank">
           <li><a class="link_name" href="#">Chart</a></li>
-        </ul>
-      </li>
-      <li>
-        <div class="iocn-link">
-          <a href="#">
-            <i class='bx bx-plug' ></i>
-            <span class="link_name">Plugins</span>
-          </a>
-          <i class='bx bxs-chevron-down arrow' ></i>
-        </div>
-        <ul class="sub-menu">
-          <li><a class="link_name" href="#">Plugins</a></li>
-          <li><a href="#">UI Face</a></li>
-          <li><a href="#">Pigments</a></li>
-          <li><a href="#">Box Icons</a></li>
         </ul>
       </li>
       <li>
@@ -425,10 +423,12 @@
         <!--<img src="image/profile.jpg" alt="profileImg">-->
       </div>
       <div class="name-job">
-        <div class="profile_name">Prem Shahi</div>
-        <div class="job">Web Desginer</div>
+        <div class="profile_name">Contact</div>
+        <div class="job">E-mail: jamesfoxbr@hotmail.com</div>
+        <div class="job">Discord Messenger: jamesfoxbr</div>
       </div>
-      <i class='bx bx-log-out' ></i>
+      <i></i>
+      <!-- <i class='bx bx-log-out' ></i> -->
     </div>
   </li>
 </ul>
@@ -439,7 +439,8 @@
       
       
     </div>
-    <div id="home" style="margin-left: 100px;"></div>
+    <!-- This is the main text area -->
+    <div id="home" style="margin-left: 100px; min-width: 500px; margin-right: 40px;" ></div>
       
   </section>
   
