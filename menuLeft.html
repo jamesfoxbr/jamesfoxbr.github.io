@@ -5,8 +5,116 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="styles.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+
+    <style>
+        html, body {
+            font-family: "Press Start 2P", Arial, Helvetica, sans-serif; 
+            font-size: 16px;
+            margin-top: 0px;
+            margin-left: 0px;
+            margin-right: 0px;
+        }
+
+        /* define a fixed width for the entire menu */
+        .navigation {
+            width: 100%;
+        }
+
+        /* reset our lists to remove bullet points and padding */
+        .mainmenu, .submenu {
+            list-style:circle;
+            padding: 0;
+            margin: 0;
+        }
+
+        /* make ALL links (main and submenu) have padding and background color */
+        .mainmenu a {
+            display: block;
+            background-color: #cccccc;
+            text-decoration: none;
+            padding: 10px;
+            color: #200a0a;
+        }
+
+        /* add hover behaviour */
+        .mainmenu a:hover {
+            background-color: #C5C5C5;
+        }
+
+        /* when hovering over a .mainmenu item,
+        display the submenu inside it.
+        we're changing the submenu's max-height from 0 to 200px;
+        */
+
+        .mainmenu li:hover .submenu {
+        display:contents;
+        max-height: 200px;
+        }
+
+        /*
+        we now overwrite the background-color for .submenu links only.
+        CSS reads down the page, so code at the bottom will overwrite the code at the top.
+        */
+
+        .submenu a {
+        background-color: #999;
+        }
+
+        /* hover behaviour for links inside .submenu */
+        .submenu a:hover {
+        background-color: #666;
+        }
+
+        .subsubmenu a {
+        background-color: #847b96;
+        }
+
+        /* hover behaviour for links inside .submenu */
+        .subsubmenu a:hover {
+        background-color: #5c74ff;
+        }
+
+        /* this is the initial state of all submenus.
+        we set it to max-height: 0, and hide the overflowed content.
+        */
+        .submenu {
+        overflow:hidden;
+        max-height: 0;
+        /* -webkit-transition: all 0.5s ease-out; */
+        }
+    </style>
+    
 </head>
-<body class="menuLeft">
-    <a href="menuLeft.html" target="middle">Link</a>
+<body style="background-color:darkslateblue;">
+
+    <nav class="navigation">
+        <ul class="mainmenu">
+            <li><a href="home.html" target="middle">Home</a></li>
+            <li><a href="about.html" target="middle">About</a></li>
+            <li><a href="#" target="middle">Commissions</a>
+                <ul class="submenu">
+                    <li><a href="commissions/colored.html" target="middle">Colored</a></li>
+                    <li><a href="commissions/sketch.html" target="middle">Sketch</a></li>
+                    <li>
+                        <a href="#" target="middle">Pixelart</a>
+                        <ul class="subsubmenu">
+                            <li><a href="commissions//pixelportrait.html" target="middle">Pixel Portrait</a></li>
+                            <li><a href="commissions/pixelart/objects.html" target="middle">Objects</a></li>
+                            <!-- Add more pixel art subcategories here -->
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+            <li><a href="contact.html" target="middle">Contact me</a></li>
+        </ul>
+    </nav>
+    
+
 </body>
 </html>
+
+    

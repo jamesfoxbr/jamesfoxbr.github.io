@@ -1,21 +1,28 @@
 body {
   text-align: center;
+  overflow: hidden; /* Hide scrollbars */
+  background-color: rgb(40, 40, 63);
+  margin-top: 0px;
+  margin-bottom: 0px;
+  margin-right:0px;
+  margin-left: 0px;
 }
 
 .grid {
     display: grid;
-    grid-template-columns: 250px auto 250px;
-    grid-template-rows: 5% 92% 3%;
+    grid-template-columns: 200px auto 200px;
+    grid-template-rows: 30px auto 30px;
     grid-gap: 0;
-    height: 98vh; /* Set the grid container height to 100% of the viewport height */
+    height: 100vh; /* Set the grid container height to 100% of the viewport height */
+    
 }
 
 header,
 aside,
 article,
 footer {
-  background: #ccc;
-  padding: 0em;
+  background: #d19b05;
+  padding: 1px;
 }
 
 header {

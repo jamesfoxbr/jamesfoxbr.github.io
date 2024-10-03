@@ -1,22 +1,53 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="gridStyles.css">
-    <title>Document</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="gridstyles.css">
+  <link rel="icon" type="image/png" href="pixelart/mini jaminho.png">
+  <title>Document</title>
+
+  <!-- <script
+  src="https://code.jquery.com/jquery-3.3.1.js"
+  integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+  crossorigin="anonymous">
+  </script>
+  <script> 
+    // This says, do the function when the "document" or DOM is ready
+    $(function() {
+      $("#header").load("header.html"); 
+      $("#footer").load("footer.html"); 
+      $("#home").load("home.html"); 
+      $("#menuLeft").load("menuLeft.html"); 
+      $("#menuRight").load("menuRight.html"); 
+    });
+
+    $(document).ready(function() {
+        $("#homeID").on("click", function (event) {
+            event.preventDefault();
+            $("#home").load("home.html");
+        });
+        $("#pricesID").on("click", function (event) {
+            event.preventDefault();
+            $("#menuLeft").load("prices.html");
+        });
+        $("#aboutID").on("click", function (event) {
+            event.preventDefault();
+            $("#home").load("about.html");
+        });
+    });
+
+  </script> -->
 </head>
 <body>
 
-    
-
-<div class="grid">
+  <div class="grid">
     <header>
       <iframe src="header.html" style="border:0px #ffffff none;" name="header" scrolling="no" frameborder="1" marginheight="0px" marginwidth="0px" height="100%" width="100%" allowfullscreen></iframe>
     </header>
   
     <aside class="sidebar-left">
-        <iframe name="left" src="menuLeft.html" style="border:0px #ffffff none;" name="left" scrolling="no" frameborder="1" marginheight="0px" marginwidth="0px" height="100%" width="100%" allowfullscreen></iframe>
+        <iframe name="left" src="menuLeft.html" style="border:0px #ffffff none;" name="left" scrolling="auto" frameborder="1" marginheight="0px" marginwidth="0px" height="100%" width="100%" allowfullscreen></iframe>
     </aside>
   
     <article>
@@ -24,15 +55,44 @@
     </article>
   
     <aside class="sidebar-right">
-      <iframe src="menuRight.html" style="border:0px #ffffff none;" name="right" scrolling="no" frameborder="1" marginheight="0px" marginwidth="0px" height="100%" width="100%" allowfullscreen></iframe>
+      <iframe src="menuRight.html" style="border:0px #ffffff none;" name="right" scrolling="auto" frameborder="1" marginheight="0px" marginwidth="0px" height="100%" width="100%" allowfullscreen></iframe>
     </aside>
     
     <footer>
       <iframe src="footer.html" style="border:0px #ffffff none;" name="footer" scrolling="no" frameborder="1" marginheight="0px" marginwidth="0px" height="100%" width="100%" allowfullscreen></iframe>
     </footer>
   </div>
-  
-  
+    
+  <!-- <table>
+    <tbody>
+      <tr>
+        <td colspan="3">
+          <div class="topnav">
+            <a href="#" class="load-content" id="homeID">Home</a>
+            <a href="#" id="pricesID">Commission Prices</a>
+            <a href="#">Contact</a>
+            <a href="#" id="aboutID">About</a>
+          </div> 
+        </td>
+      </tr>
+      <tr>
+        <td width="15%" style="background-color: rgb(59, 67, 173); vertical-align: text-top;">
+          <div id="menuLeft"></div>
+        </td>
+        <td>
+          <div id="home" style="vertical-align: text-top;"></div>
+        </td>
+        <td width="15%" style="background-color: rgb(59, 67, 173);">
+          <div id="menuRight" width="15%" style="background-color: rgb(59, 67, 173); vertical-align: text-top;"></div>
+        </td>
+      </tr>
+      <tr>
+        <td colspan="3">
+          <div id="footer" style="background-color: rgb(59, 67, 173);"></div> 
+        </td>
+      </tr>
+    </tbody>
+  </table> -->
     
 </body>
 </html>
