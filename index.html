@@ -29,13 +29,13 @@
             event.preventDefault();
             $("#home").load("home.html");
         });
-        $("#pricesID").on("click", function (event) {
+        $("#coloredID").on("click", function (event) {
             event.preventDefault();
-            $("#menuLeft").load("prices.html");
+            $("#home").load("commissions/colored.html");
         });
-        $("#aboutID").on("click", function (event) {
+        $("#pixelartID").on("click", function (event) {
             event.preventDefault();
-            $("#home").load("about.html");
+            $("#home").load("commissions/pixelart.html");
         });
     });
 
@@ -318,31 +318,31 @@
   <div class="sidebar close">
     <div class="logo-details">
       <i class='bx bxl-c-plus-plus'></i>
-      <span class="logo_name">CodingLab</span>
+      <span class="logo_name">JamesFoxbr</span>
     </div>
     <ul class="nav-links">
       <li>
         <a href="#">
           <i class='bx bx-grid-alt' ></i>
-          <span class="link_name">Dashboard</span>
+          <span class="link_name" id="homeID">Home</span>
         </a>
         <ul class="sub-menu blank">
-          <li><a class="link_name" href="#">Category</a></li>
+          <li><a class="link_name" href="#">Home</a></li>
         </ul>
       </li>
       <li>
         <div class="iocn-link">
           <a href="#">
             <i class='bx bx-collection' ></i>
-            <span class="link_name">Category</span>
+            <span class="link_name">Commissions</span>
           </a>
           <i class='bx bxs-chevron-down arrow' ></i>
         </div>
         <ul class="sub-menu">
-          <li><a class="link_name" href="#">Category</a></li>
-          <li><a href="#">HTML & CSS</a></li>
-          <li><a href="#">JavaScript</a></li>
-          <li><a href="#">PHP & MySQL</a></li>
+          <li><a class="link_name" href="#">Commissions</a></li>
+          <li><a href="#" id="coloredID">Colored</a></li>
+          <li><a href="#" id="sketchID">Sketch</a></li>
+          <li><a href="#" id="pixelartID">Pixelart</a></li>
         </ul>
       </li>
       <li>
