@@ -10,7 +10,7 @@ body {
 
 .grid {
     display: grid;
-    grid-template-columns: 360px auto 200px;
+    grid-template-columns: 360px auto 360px;
     grid-template-rows: 30px auto 30px;
     grid-gap: 0;
     height: 100vh; /* Set the grid container height to 100% of the viewport height */
