@@ -1,75 +1,95 @@
-    <!DOCTYPE html>
-    <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Document</title>
-        <link rel="stylesheet" href="styles.css">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="styles.css">
 
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
 
-        <style>
-            
+    <style>
+    html {
+      height:100%;
+    }
 
-html {
-  height:100%;
-}
+    body {
+      margin:0;
+    }
 
-body {
-  margin:0;
-}
+    .bg {
+      animation:slide 3s ease-in-out infinite alternate;
+      background-image: linear-gradient(-60deg, #6c3 50%, #09f 50%);
+      bottom:0;
+      left:-50%;
+      opacity:.5;
+      position:fixed;
+      right:-50%;
+      top:0;
+      z-index:-1;
+    }
 
-.bg {
-  animation:slide 3s ease-in-out infinite alternate;
-  background-image: linear-gradient(-60deg, #6c3 50%, #09f 50%);
-  bottom:0;
-  left:-50%;
-  opacity:.5;
-  position:fixed;
-  right:-50%;
-  top:0;
-  z-index:-1;
-}
+    .bg2 {
+      animation-direction:alternate-reverse;
+      animation-duration:4s;
+    }
 
-.bg2 {
-  animation-direction:alternate-reverse;
-  animation-duration:4s;
-}
+    .bg3 {
+      animation-duration:5s;
+    }
 
-.bg3 {
-  animation-duration:5s;
-}
+    .content {
+      background-color:rgba(255,255,255,.8);
+      border-radius:.25em;
+      box-shadow:0 0 .25em rgba(0,0,0,.25);
+      box-sizing:border-box;
+      left:10%;
+      padding:1vmin;
+      position:fixed;
+      text-align:justify;
+      top: 50px;
+      transform:translate(-5%, -5%);
+    }
 
-.content {
-  background-color:rgba(255,255,255,.8);
-  border-radius:.25em;
-  box-shadow:0 0 .25em rgba(0,0,0,.25);
-  box-sizing:border-box;
-  left:10%;
-  padding:1vmin;
-  position:fixed;
-  text-align:center;
-  top:10%;
-  transform:translate(-5%, -5%);
-}
+    h1 {
+      font-family:monospace;
+    }
 
-h1 {
-  font-family:monospace;
-}
-
-@keyframes slide {
-  0% {
-    transform:translateX(-25%);
-  }
-  100% {
-    transform:translateX(25%);
-  }
-}
+    @keyframes slide {
+      0% {
+        transform:translateX(-25%);
+      }
+      100% {
+        transform:translateX(25%);
+      }
+    }
 
 
-        </style>
+    .type {
+      color:#0000;
+      background:
+        linear-gradient(-90deg,#000000 5px,#0000 0) 10px 0,
+        linear-gradient(#000000 0 0) 0 0;
+      background-size:calc(var(--n)*10ch) 200%;
+      -webkit-background-clip:padding-box,text;
+      background-clip:padding-box,text;
+      background-repeat:no-repeat;
+      animation: 
+      b .7s infinite steps(1),   
+      t calc(var(--n)*.3s) steps(var(--n)) forwards;
+      font-size: 20px;
+    }
+
+    @keyframes t{
+      from {background-size:0 200%}
+    }
+    @keyframes b{
+      50% {background-position:0 -100%,0 0}
+    }
+
+  </style>
 
 </head>
 <body>
@@ -78,10 +98,21 @@ h1 {
     <div class="bg"></div>
     <div class="bg bg2"></div>
     <div class="bg bg3"></div>
+    
     <div class="content">
-        <img src="pixelart/James animated x2.gif" class="center" style="width: 150px; "> 
+        <img src="pixelart/James animated x2.gif" class="center"  style="width: 150px; "> <br>
         
-        <p style="color: black;">
+        
+        
+        <span class="type" style="--n:53">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quos perferendis, magni minus culpa obcaecati veniam cum quidem, nemo odit facilis, 
+          consectetur eos? Pariatur eveniet, perspiciatis ea fugit molestias error reprehenderit?
+          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quos perferendis, magni minus culpa obcaecati veniam cum quidem, nemo odit facilis, 
+          consectetur eos? Pariatur eveniet, perspiciatis ea fugit molestias error reprehenderit?
+        </span>
+
+
+        
+        <!-- <p style="color: black;">
             Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quos perferendis, magni minus culpa obcaecati veniam cum quidem, nemo odit facilis, 
             consectetur eos? Pariatur eveniet, perspiciatis ea fugit molestias error reprehenderit?
         </p>
@@ -92,7 +123,7 @@ h1 {
         <p style="color: black;">
             Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quos perferendis, magni minus culpa obcaecati veniam cum quidem, nemo odit facilis, 
             consectetur eos? Pariatur eveniet, perspiciatis ea fugit molestias error reprehenderit?
-        </p>
+        </p> -->
        
     </div>
 
