@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery</title>
+
+    <link rel="stylesheet" href="/styles.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+
+    <style>
+       /* Style for the image gallery */
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Responsive columns */
+    gap: 15px; /* Gap between images */
+    padding: 20px;
+}
+
+/* Style for individual images */
+.gallery img {
+    width: 100%; /* Make the images responsive */
+    height: auto; /* Maintain aspect ratio */
+    object-fit: cover; /* Ensures the image covers the grid area without distortion */
+    border-radius: 8px; /* Optional: Rounds the corners of images */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Adds a subtle shadow */
+    transition: transform 0.3s ease-in-out; /* Animation for hover effect */
+}
+
+/* Hover effect on images */
+.gallery img:hover {
+    transform: scale(1.05); /* Slight zoom on hover */
+}
+
+/* Modal styles */
+/* Modal styles */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 999; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgba(0, 0, 0, 0.8); /* Black background with opacity */
+}
+
+/* Modal image styles */
+.modal-content {
+    margin: auto;
+    display: block;
+    width: 80%; /* Set image width */
+    max-width: 700px; /* Max width for larger screens */
+    height: auto; /* Maintain aspect ratio */
+}
+
+/* Close button styles */
+.close {
+    position: absolute;
+    top: 20px;
+    right: 35px;
+    color: white;
+    font-size: 40px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+
+    </style>
+
+
+</head>
+<body>
+    <h2>Gallery</h2>
+    
+    <div class="gallery">
+        <img src="images/Annabelle chic.png" alt="Image 1" class="gallery-image">
+        <img src="images/Chic dog colored.png" alt="Image 2" class="gallery-image">
+        <img src="images/Jimmy New Uniform.png" alt="Image 3" class="gallery-image">
+        <img src="images/Jimmy Smiling.png" alt="Image 4" class="gallery-image">
+        <img src="images/Sabina - Henrietta Watchild.png" alt="Image 5" class="gallery-image">
+        <img src="images/Urchin Good Boy.png" alt="Image 6" class="gallery-image">
+    </div>
+
+    <div id="modal" class="modal">
+        <span class="close" id="close">&times;</span>
+        <img class="modal-content" id="modal-image">
+    </div>
+
+    <script>
+        // Get modal element
+        const modal = document.getElementById("modal");
+        // Get the image inside the modal
+        const modalImage = document.getElementById("modal-image");
+        // Get close button
+        const closeButton = document.getElementById("close");
+
+        // Add click event listeners to gallery images
+        const galleryImages = document.querySelectorAll(".gallery-image");
+        galleryImages.forEach(image => {
+            image.addEventListener("click", function() {
+                modal.style.display = "block"; // Show modal
+                modalImage.src = this.src; // Set modal image to clicked image
+            });
+        });
+
+        // Close the modal when the close button is clicked
+        closeButton.addEventListener("click", function() {
+            modal.style.display = "none"; // Hide modal
+        });
+
+        // Close the modal when clicking outside the image
+        modal.addEventListener("click", function(event) {
+            if (event.target === modal) {
+                modal.style.display = "none"; // Hide modal
+            }
+        });
+    </script>
+</body>
+</html>
