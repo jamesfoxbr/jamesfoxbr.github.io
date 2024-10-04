@@ -6,6 +6,12 @@ body {
     margin-left: 20px;
   }
 
+  .svg-icon {
+    filter: invert(100%);
+    width: 24px;
+    height: 24px;
+  }
+
   .press-start-2p-regular {
     font-family: "Press Start 2P", system-ui;
     font-weight: 400;

@@ -9,6 +9,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+    
 
     <style>
         /* Google Fonts Import Link */
@@ -278,17 +279,16 @@
     
 </head>
 <body style="background-color:darkslateblue;">
-
    
     <div class="sidebar">
         <div class="logo-details">
-          <i class='bx bxl-c-plus-plus'></i>
+          <i><img src="pixelart/mini jaminho.png" style="width: 32px;"></i>
           <span class="logo_name">JamesFoxbr</span>
         </div>
         <ul class="nav-links">
           <li>
             <a href="home.html" target="middle">
-              <i class='bx bx-grid-alt' ></i>
+              <i><img src="icons/house-chimney-solid.svg" class="svg-icon"></i>
               <span class="link_name">Home</span>
             </a>
             <ul class="sub-menu blank">
@@ -298,7 +298,7 @@
           <li>
             <div class="iocn-link">
               <a href="commissions/colored.html" target="middle">
-                <i class='bx bx-collection' ></i>
+                <i><img src="icons/brush-fill.svg" class="svg-icon"></i>
                 <span class="link_name">Colored Commissions</span>
               </a>
               <i class='bx bxs-chevron-down arrow' ></i>
@@ -312,7 +312,7 @@
           <li>
             <div class="iocn-link">
               <a href="commissions/sketch.html" target="middle">
-                <i class='bx bx-book-alt' ></i>
+                <i><img src="icons/brush.svg" class="svg-icon"></i>
                 <span class="link_name">Sketch Commissions</span>
               </a>
               <i class='bx bxs-chevron-down arrow' ></i>
@@ -326,7 +326,7 @@
           <li>
             <div class="iocn-link">
               <a href="#">
-                <i class='bx bx-plug' ></i>
+                <i><img src="icons/joystick.svg" class="svg-icon"></i>
                 <span class="link_name">Pixelart Commissions</span>
               </a>
               <i class='bx bxs-chevron-down arrow' ></i>
@@ -340,7 +340,7 @@
           </li>
           <li>
             <a href="#">
-              <i class='bx bx-pie-chart-alt-2' ></i>
+              <i><img src="icons/file-text.svg" class="svg-icon"></i>
               <span class="link_name">Terms of Service</span>
             </a>
             <ul class="sub-menu blank">
@@ -349,7 +349,7 @@
           </li>
           <li>
             <a href="#">
-              <i class='bx bx-line-chart' ></i>
+              <i><img src="icons/easel.svg" class="svg-icon"></i>
               <span class="link_name">Gallery</span>
             </a>
             <ul class="sub-menu blank">
@@ -358,7 +358,7 @@
           </li>
           <li>
             <a href="#">
-              <i class='bx bx-compass' ></i>
+              <i><img src="icons/person-circle.svg" class="svg-icon"></i>
               <span class="link_name">About</span>
             </a>
             <ul class="sub-menu blank">
@@ -367,7 +367,7 @@
           </li>
           <li>
             <a href="#">
-              <i class='bx bx-history'></i>
+              <i><img src="icons/envelope-at-fill.svg" class="svg-icon"></i>
               <span class="link_name">Contact</span>
             </a>
             <ul class="sub-menu blank">
@@ -398,24 +398,24 @@
         </div>
       </li>
     </ul>
-      </div>
+    </div>
       
-      <div class="one"></div>
-      <script>
-      let arrow = document.querySelectorAll(".arrow");
-      for (var i = 0; i < arrow.length; i++) {
-        arrow[i].addEventListener("click", (e)=>{
-       let arrowParent = e.target.parentElement.parentElement;//selecting main parent of arrow
-       arrowParent.classList.toggle("showMenu");
-        });
-      }
-      let sidebar = document.querySelector(".sidebar");
-      let sidebarBtn = document.querySelector(".bx-menu");
-      console.log(sidebarBtn);
-      sidebarBtn.addEventListener("click", ()=>{
-        sidebar.classList.toggle("close");
+    <div class="one"></div>
+    <script>
+    let arrow = document.querySelectorAll(".arrow");
+    for (var i = 0; i < arrow.length; i++) {
+      arrow[i].addEventListener("click", (e)=>{
+      let arrowParent = e.target.parentElement.parentElement;//selecting main parent of arrow
+      arrowParent.classList.toggle("showMenu");
       });
-      </script>
+    }
+    let sidebar = document.querySelector(".sidebar");
+    let sidebarBtn = document.querySelector(".bx-menu");
+    console.log(sidebarBtn);
+    sidebarBtn.addEventListener("click", ()=>{
+      sidebar.classList.toggle("close");
+    });
+    </script>
 
 </body>
 </html>
