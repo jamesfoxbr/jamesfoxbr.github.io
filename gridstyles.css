@@ -21,7 +21,7 @@ header,
 aside,
 article,
 footer {
-  background: #d19b05;
+  background: #05a1d1; /*grid division colors */
   padding: 1px;
 }
 

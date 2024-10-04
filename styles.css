@@ -1,5 +1,5 @@
 body {
-    background-color: rgb(40, 40, 63);
+    background-color: #11101d;
     margin-top: 0px;
     margin-bottom: 10px;
     margin-right:20px;
@@ -41,6 +41,7 @@ body {
     color: rgb(244, 244, 247);
     font-family: "Press Start 2P", system-ui;
     font-size: 150%;
+    text-align: center; /* Centering the images */
   }
 
   h3 {
@@ -104,20 +105,29 @@ li::marker {
   background-color:#00000000;
 }
 
-.text{
-    font-weight: 600;
-    font-size: 70px;
-    line-height:65px;
-    letter-spacing: 10px;
-    text-align: center;
-    text-transform: uppercase;
-    color: transparent;
-    -webkit-background-clip: text;
-    background-clip: text;
-    background-size: 400%;
-    animation: move 5s ease infinite;
-    background-image: linear-gradient( 68.7deg,  rgba(29,173,235,1) 13.2%, rgba(137,149,250,1) 29.8%, rgba(229,109,212,1) 48.9%, rgba(255,68,128,1) 68.2%, rgba(255,94,0,1) 86.4% );
+.image-container {
+  text-align: center; /* Centering the images */
 }
+
+.image-container img {
+  display: inline-block; /* Ensures images are treated as inline-block elements */
+}
+
+.table_component {
+  display: flex;
+  justify-content: center; /* Center the table horizontally */
+}
+
+table {
+  width: 100%; /* Auto width so that table takes its content width */
+}
+
+th {
+  text-align: center; /* Centers the text inside each <th> */
+  padding: 0px; /* Adds some padding to avoid text clumping */
+  color: white; /* Sets the font color to white */
+}
+
 
 @keyframes move {
     0%,100%{
