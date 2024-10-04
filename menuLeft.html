@@ -261,11 +261,34 @@
           font-size: 26px;
           font-weight: 600;
         }
+        .smoll_text{
+          font-size: 12px;
+          color: #fff;
+        }
+        .social-media {
+        display: flex; /* Use flexbox for alignment */
+        justify-content: center; /* Center the icons horizontally */
+        gap: 0px; /* Space between icons */
+        padding: 0px; /* Padding around the icons */
+        background-color: #f8f9fa00; /* Optional background color */
+       }
+
+       .social-icon img {
+        width: 12px; /* Half size of the original icons */
+        height: 12px; /* Half size of the original icons */
+        transition: transform 0.3s; /* Smooth hover effect */
+       } 
+
+      .social-icon:hover img {
+      transform: scale(1.1); /* Scale up on hover */
+       }
         @media (max-width: 420px) {
           .sidebar.close .nav-links li .sub-menu{
             display: none;
           }
         }
+        
+
       </style>
 
 
@@ -374,25 +397,30 @@
               <li><a class="link_name" href="contact.html" target="middle">Contact</a></li>
             </ul>
           </li>
-          <!-- <li>
-            <a href="#">
-              <i class='bx bx-cog' ></i>
-              <span class="link_name">Setting</span>
-            </a>
-            <ul class="sub-menu blank">
-              <li><a class="link_name" href="#">Setting</a></li>
-            </ul>
-          </li>
-          <li> -->
         <div class="profile-details">
           <div class="profile-content">
             <!--<img src="image/profile.jpg" alt="profileImg">-->
           </div>
-          <div class="name-job">
+          <!-- <div class="name-job">
             <div class="profile_name">Contact</div>
             <div class="job">E-mail: jamesfoxbr@hotmail.com</div>
             <div class="job">Discord Messenger: jamesfoxbr</div>
-          </div>
+          </div> -->
+          <div class="social-media">
+            <a href="https://discord.gg/nenhFHX" target="_blank" class="social-icon">
+                <img src="icons/icons8-discord.svg" alt="Discord" style="width: 50%; height: 50%;">
+            </a>
+            <a href="https://x.com/jamesfoxbr" target="_blank" class="social-icon">
+                <img src="icons/icons8-twitter.svg" alt="Twitter" style="width: 50%; height: 50%;">
+            </a>
+            <a href="http://www.youtube.com/user/jamesfoxbr" target="_blank" class="social-icon">
+                <img src="icons/icons8-youtube.svg" alt="Youtube" style="width: 50%; height: 50%;">
+            </a>
+            <!-- <a href="https://linkedin.com" target="_blank" class="social-icon">
+                <img src="icons/linkedin.svg" alt="LinkedIn" style="width: 50%; height: 50%;">
+            </a> -->
+        </div>
+        
           <i></i>
           <!-- <i class='bx bx-log-out' ></i> -->
         </div>
