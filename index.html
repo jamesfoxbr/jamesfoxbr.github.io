@@ -1,38 +1,162 @@
 <!DOCTYPE html>
-<html lang="en">
+<!-- Created by CodingLab |www.youtube.com/CodingLabYT-->
+<html lang="en" dir="ltr">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="gridstyles.css">
-  <link rel="icon" type="image/png" href="pixelart/mini jaminho.png">
-  <title>Document</title>
-
+<meta charset="UTF-8">
+<!--<title> Drop Down Sidebar Menu | CodingLab </title>-->
+<link rel="stylesheet" href="style.css">
+<!-- Boxiocns CDN Link -->
+<link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+<link href='style/menu.css' rel='stylesheet'>
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body>
-
-  <div class="grid">
-    <header>
-      <iframe src="header.html" style="border:0px #ffffff none;" name="header" scrolling="no" frameborder="1" marginheight="0px" marginwidth="0px" height="100%" width="100%" allowfullscreen></iframe>
-    </header>
-  
-    <aside class="sidebar-left">
-        <iframe name="left" src="menuLeft.html" style="border:0px #ffffff none;" name="left" scrolling="auto" frameborder="1" marginheight="0px" marginwidth="0px" height="100%" width="100%" allowfullscreen></iframe>
-    </aside>
-  
-    <article>
-        <iframe src="home.html" style="border:0px #ffffff none;" name="middle" scrolling="auto" frameborder="1" marginheight="0px" marginwidth="0px" height="100%" width="100%" allowfullscreen></iframe>
-    </article>
-  
-    <aside class="sidebar-right">
-      <iframe src="menuRight.html" style="border:0px #ffffff none;" name="right" scrolling="auto" frameborder="1" marginheight="0px" marginwidth="0px" height="100%" width="100%" allowfullscreen></iframe>
-    </aside>
-    
-    <footer>
-      <iframe src="footer.html" style="border:0px #ffffff none;" name="footer" scrolling="no" frameborder="1" marginheight="0px" marginwidth="0px" height="100%" width="100%" allowfullscreen></iframe>
-    </footer>
+<div class="sidebar close">
+<div class="logo-details">
+    <i><img src="pixelart/mini jaminho.png" style="width: 32px;"></i>
+  <span class="logo_name">Jamesfoxbr</span>
+</div>
+<ul class="nav-links">
+  <li>
+    <a href="home.html" target="middle">
+        <i><img src="icons/house-chimney-solid.svg" class="svg-icon"></i>
+      <span class="link_name">Home</span>
+    </a>
+    <ul class="sub-menu blank">
+      <li><a class="link_name" href="#">Home</a></li>
+    </ul>
+  </li>
+  <li>
+    <div class="iocn-link">
+      <a href="#">
+        <i><img src="icons/brush-fill.svg" class="svg-icon"></i>
+        <span class="link_name">Colored Commissions</span>
+      </a>
+      <i class='bx bxs-chevron-down arrow' ></i>
+    </div>
+    <ul class="sub-menu">
+      <li><a class="link_name" href="#">Colored Commissions</a></li>
+      <li><a href="commissions/coloredportrait.html" target="middle">Portraits</a></li>
+      <li><a href="commissions/coloredfullbody.html" target="middle">Full Body</a></li>
+    </ul>
+  </li>
+  <li>
+    <div class="iocn-link">
+      <a href="#">
+        <i><img src="icons/brush.svg" class="svg-icon"></i>
+        <span class="link_name">Sketch Commissions</span>
+      </a>
+      <i class='bx bxs-chevron-down arrow' ></i>
+    </div>
+    <ul class="sub-menu">
+      <li><a class="link_name" href="#">Sketch Commissions</a></li>
+      <li><a href="commissions/sketchportrait.html" target="middle">Portraits</a></li>
+      <li><a href="commissions/sketchfullbody.html" target="middle">Full Body</a></li>
+    </ul>
+  </li>
+  <li>
+    <div class="iocn-link">
+      <a href="#">
+        <i><img src="icons/joystick.svg" class="svg-icon"></i>
+        <span class="link_name">Pixelart Commissions</span>
+      </a>
+      <i class='bx bxs-chevron-down arrow' ></i>
+    </div>
+    <ul class="sub-menu">
+      <li><a class="link_name" href="#">Pixelart Commissions</a></li>
+      <li><a href="commissions/pixelportrait.html" target="middle">Animated Portraits</a></li>
+      <li><a href="#" target="middle">Option 2</a></li>
+    </ul>
+  </li>
+  <li>
+    <a href="tos.html" target="middle">
+        <i><img src="icons/file-text.svg" class="svg-icon"></i>
+      <span class="link_name">Terms of Service</span>
+    </a>
+    <ul class="sub-menu blank">
+      <li><a class="link_name" href="tos.html" target="middle">Terms of Service</a></li>
+    </ul>
+  </li>
+  <li>
+    <a href="gallery.html" target="middle">
+        <i><img src="icons/easel.svg" class="svg-icon"></i>
+      <span class="link_name">Gallery</span>
+    </a>
+    <ul class="sub-menu blank">
+      <li><a class="link_name" href="gallery.html" target="middle">Gallery</a></li>
+    </ul>
+  </li>
+  <li>
+    <a href="about.html" target="middle">
+        <i><img src="icons/person-circle.svg" class="svg-icon"></i>
+      <span class="link_name">About</span>
+    </a>
+    <ul class="sub-menu blank">
+      <li><a class="link_name" href="a.html" target="middle">About</a></li>
+    </ul>
+  </li>
+  <li>
+    <a href="contact.html" target="middle">
+        <i><img src="icons/envelope-at-fill.svg" class="svg-icon"></i>
+      <span class="link_name">Contact</span>
+    </a>
+    <ul class="sub-menu blank">
+      <li><a class="link_name" href="contact.html" target="middle">Contact</a></li>
+    </ul>
+  </li>
+<div class="profile-details">
+  <div class="profile-content">
+    <!--<img src="image/profile.jpg" alt="profileImg">-->
   </div>
-    
+  <div >
+    <div class="social-media">
+        <a href="https://discord.gg/nenhFHX" target="_blank" class="social-icon">
+            <img src="icons/icons8-discord.svg" alt="Discord" style="width: 50%; height: 50%;">
+        </a>
+        <a href="https://x.com/jamesfoxbr" target="_blank" class="social-icon">
+            <img src="icons/icons8-twitter.svg" alt="Twitter" style="width: 50%; height: 50%;">
+        </a>
+        <a href="http://www.youtube.com/user/jamesfoxbr" target="_blank" class="social-icon">
+            <img src="icons/icons8-youtube.svg" alt="Youtube" style="width: 50%; height: 50%;">
+        </a>
+    </div>
+  </div>
+</div>
+</li>
+</ul>
+</div>
+<section class="home-section">
+<div class="home-content">
+  <i class='bx bx-menu' ></i>
   
+</div>
+
+ <!-- Add your page content below -->
+ <div style="height: 100vh;">
     
+    <iframe id="myIframe" src="home.html" style="border:0px #ffffff none; " name="middle" scrolling="auto" allowfullscreen></iframe>
+    
+  </div>
+  <!-- End of your content -->
+
+</section>
+
+<div class="one"></div>
+<script>
+let arrow = document.querySelectorAll(".arrow");
+for (var i = 0; i < arrow.length; i++) {
+arrow[i].addEventListener("click", (e)=>{
+let arrowParent = e.target.parentElement.parentElement;//selecting main parent of arrow
+arrowParent.classList.toggle("showMenu");
+});
+}
+let sidebar = document.querySelector(".sidebar");
+let sidebarBtn = document.querySelector(".bx-menu");
+console.log(sidebarBtn);
+sidebarBtn.addEventListener("click", ()=>{
+sidebar.classList.toggle("close");
+});
+</script>
 </body>
 </html>
+
