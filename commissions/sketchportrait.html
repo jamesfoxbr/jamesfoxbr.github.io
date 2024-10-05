@@ -10,15 +10,126 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+
+    <style>
+       /* Style for the image gallery */
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Responsive columns */
+    gap: 15px; /* Gap between images */
+    padding: 20px;
+}
+
+/* Style for individual images */
+.gallery img {
+    width: 100%; /* Make the images responsive */
+    height: auto; /* Maintain aspect ratio */
+    object-fit: cover; /* Ensures the image covers the grid area without distortion */
+    border-radius: 8px; /* Optional: Rounds the corners of images */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Adds a subtle shadow */
+    transition: transform 0.3s ease-in-out; /* Animation for hover effect */
+}
+
+/* Hover effect on images */
+.gallery img:hover {
+    transform: scale(1.05); /* Slight zoom on hover */
+}
+
+/* Modal styles */
+/* Modal styles */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 999; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgba(0, 0, 0, 0.8); /* Black background with opacity */
+}
+
+/* Modal image styles */
+.modal-content {
+    margin: auto;
+    display: block;
+    width: 80%; /* Set image width */
+    max-width: 700px; /* Max width for larger screens */
+    height: auto; /* Maintain aspect ratio */
+}
+
+/* Close button styles */
+.close {
+    position: absolute;
+    top: 20px;
+    right: 35px;
+    color: white;
+    font-size: 40px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+    </style>
 </head>
 <body>
     <div class="container">
-        <div class="press-start-2p-regular">Pixel Portraits</div>
+        <div class="press-start-2p-regular">Sketch Portrait</div>
     </div>
     
-    <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint quidem illum accusamus laboriosam, blanditiis, inventore dolorum quas obcaecati repellat, 
-        tempora facere voluptas eius ipsam voluptates perferendis nobis porro aliquid esse?
-    </p>
+        <p><b>Base Cost:</b> $15 USD (One Character)</p>
+        
+        <br>
+        <h1>Extra Details</h1>
+        <ul>
+            <li>The Portrait is made using sketch style without colors like in this examples below.</li>
+            <li>Portraits show the character from neck or shoulder up or sometimes hip up in simple poses.</li>
+            <li>Portraits sketches don't have a background.</li>
+        </ul>
+
+        <hr>
+        <br>
+        <h1>Examples</h1>
+
+    <div class="gallery">
+        <img src="/images/sketchportrait1.png" alt="Image 2" class="gallery-image">
+        <img src="/images/sketchportrait2.png" alt="Image 2" class="gallery-image">
+        <img src="/images/sketchportrait3.png" alt="Image 2" class="gallery-image">
+        <img src="/images/sketchportrait4.png" alt="Image 2" class="gallery-image">
+    </div>
+
+    <div id="modal" class="modal">
+        <span class="close" id="close">&times;</span>
+        <img class="modal-content" id="modal-image">
+    </div>
+
+    <script>
+        // Get modal element
+        const modal = document.getElementById("modal");
+        // Get the image inside the modal
+        const modalImage = document.getElementById("modal-image");
+        // Get close button
+        const closeButton = document.getElementById("close");
+
+        // Add click event listeners to gallery images
+        const galleryImages = document.querySelectorAll(".gallery-image");
+        galleryImages.forEach(image => {
+            image.addEventListener("click", function() {
+                modal.style.display = "block"; // Show modal
+                modalImage.src = this.src; // Set modal image to clicked image
+            });
+        });
+
+        // Close the modal when the close button is clicked
+        closeButton.addEventListener("click", function() {
+            modal.style.display = "none"; // Hide modal
+        });
+
+        // Close the modal when clicking outside the image
+        modal.addEventListener("click", function(event) {
+            if (event.target === modal) {
+                modal.style.display = "none"; // Hide modal
+            }
+        });
+    </script>
 </body>
 </html>
